@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US" class="country-US language-en">
+<head>
+  <title>equalizer bars</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>equalizer bars</h1>
+
+  <equalizer-bars playing></equalizer-bars>
+  <equalizer-bars count="3"></equalizer-bars>
+  <equalizer-bars count="6" class="highlight"></equalizer-bars>
+  <equalizer-bars count="10"></equalizer-bars>
+
+  <br>
+
+  <equalizer-bars count="7" id="editable"></equalizer-bars>
+  <button id="decrease">-</button><button id="increase">+</button>
+
+  <script type="text/javascript" src="bars.js"></script>
+
+  <script type="text/javascript">
+    const bars = document.getElementById('editable');
+    let count = 7;
+    document.getElementById('increase').addEventListener('click', () => {
+      count++;
+      bars.setAttribute('count', count);
+    });
+    document.getElementById('decrease').addEventListener('click', () => {
+      if (count > 1) {
+        count--;
+        bars.setAttribute('count', count);
+      }
+    });
+  </script>
+</body>
+</html>

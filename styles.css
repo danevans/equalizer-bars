@@ -1,0 +1,16 @@
+body {
+  --foreground: #929292;
+  background-color: #171717;
+  color: var(--foreground);
+  margin-left: 50px;
+}
+
+equalizer-bars {
+  display: block;
+  margin-bottom: 1em;
+  --bar-color: var(--foreground);
+}
+
+.highlight {
+  --bar-color: hotpink;
+}
